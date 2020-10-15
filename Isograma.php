@@ -1,13 +1,14 @@
 <?php
 
-/*
- * Esto es sólo un ESQUELETO para el ejercicio de los "isogramas".
+/**
+ * esIsograma
+ *
+ * @param  mixed $s
+ * @return void
  */
 
 function esIsograma($s)
 {
-    //
-    // TU CÓDIGO VA AQUÍ
-    //
+    $s = mb_str_split(mb_ereg_replace("[- ]", '', mb_strtolower($s)));
+    return array_unique($s) == $s;
 }
-
